@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - الأدمن</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- تسجيل الدخول -->
+    <div id="login-section" class="flex-grow flex items-center justify-center px-4">
+        <div class="glass-card p-8 rounded-3xl max-w-md w-full text-center">
+            <h2 class="text-2xl font-bold mb-6 text-blue-300">تسجيل دخول الأدمن</h2>
+            <form id="login-form" class="space-y-4">
+                <input type="text" id="admin-user" placeholder="اسم المستخدم" class="glass-input w-full p-3 rounded-xl" required>
+                <input type="password" id="admin-password" placeholder="كلمة السر" class="glass-input w-full p-3 rounded-xl" required>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition">دخول</button>
+            </form>
+            <p id="error-message" class="text-red-400 text-sm mt-4 hidden"></p>
+            <button id="forgot-pass-btn" class="text-xs text-blue-400 underline mt-4">نسيت كلمة السر / تغيير كلمة السر؟</button>
+        </div>
+    </div>
+
+    <!-- نافذة استعادة كلمة السر بالرقم القومي ورمز SMS -->
+    <div id="reset-modal" class="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center hidden px-4 z-50">
+        <div class="glass-card p-6 rounded-3xl max-w-md w-full relative">
+            <h3 class="text-xl font-bold mb-4 text-indigo-300">تغيير كلمة السر</h3>
+            
+            <!-- خطوة 1: أدخل الرقم القومي -->
+            <div id="reset-step-1" class="space-y-4">
+                <p class="text-xs text-gray-300">أدخل الرقم القومي لإرسال رمز التحقق إلى الرقم (01098227150):</p>
+                <input type="text" id="national-id-input" placeholder="الرقم القومي المكون من 14 رقم" class="glass-input w-full p-3 rounded-xl">
+                <button id="send-otp-btn" class="w-full bg-indigo-600 hover:bg-indigo-700 py-2.5 rounded-xl text-sm font-bold">إرسال رمز التحقق</button>
+            </div>
+
+            <!-- خطوة 2: أدخل رمز OTP وكلمة السر الجديدة -->
+            <div id="reset-step-2" class="space-y-4 hidden">
+                <p class="text-xs text-green-400">تم إرسال رمز التحقق لـ 01098227150</p>
+                <input type="text" id="otp-input" placeholder="رمز التحقق (OTP)" class="glass-input w-full p-3 rounded-xl">
+                <input type="password" id="new-password-input" placeholder="كلمة السر الجديدة" class="glass-input w-full p-3 rounded-xl">
+                <button id="confirm-reset-btn" class="w-full bg-green-600 hover:bg-green-700 py-2.5 rounded-xl text-sm font-bold">تأكيد التغيير</button>
+            </div>
+
+            <p id="reset-error" class="text-red-400 text-xs mt-2 hidden"></p>
+            <button id="close-modal-btn" class="mt-4 text-xs text-gray-400 hover:text-white">إلغاء</button>
+        </div>
+    </div>
+
+    <!-- لوحة التحكم -->
+    <div id="dashboard-section" class="flex-grow container mx-auto px-4 py-8 hidden">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-2xl font-bold text-indigo-200">إدارة المحتوى والمحاضرات</h2>
+            <button id="logout-btn" class="bg-red-600/80 hover:bg-red-600 px-4 py-2 rounded-xl text-sm transition">تسجيل الخروج</button>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl mb-8">
+            <h3 class="text-xl font-bold mb-4">إضافة محتوى جديد</h3>
+            <form id="add-content-form" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <select id="select-year" class="glass-input p-3 rounded-xl bg-slate-800">
+                    <option value="1">الفرقة الأولى</option>
+                    <option value="2">الفرقة الثانية</option>
+                </select>
+                <select id="select-term" class="glass-input p-3 rounded-xl bg-slate-800">
+                    <option value="1">الترم الأول</option>
+                    <option value="2">الترم الثاني</option>
+                </select>
+                <input type="text" id="subject-name" placeholder="اسم المادة" class="glass-input p-3 rounded-xl" required>
+                <input type="url" id="video-link" placeholder="رابط المحاضرة / الفيديو" class="glass-input p-3 rounded-xl" required>
+                <button type="submit" class="md:col-span-2 bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl transition">حفظ ونشر المحتوى</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
+
