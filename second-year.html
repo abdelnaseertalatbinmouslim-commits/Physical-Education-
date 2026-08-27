@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفرقة الثانية - علوم الرياضة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col min-h-screen">
+    <header class="glass-card m-4 rounded-2xl p-4 flex justify-between items-center shadow-2xl">
+        <h1 class="text-xl font-bold text-blue-300">الفرقة الثانية - علوم الرياضة</h1>
+        <a href="index.html" class="text-sm bg-white/10 hover:bg-white/20 px-4 py-2 rounded-xl transition">الرئيسية</a>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-12 flex flex-col items-center">
+        <h2 class="text-3xl font-extrabold mb-8 text-indigo-200">اختر الفصل الدراسي</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl">
+            <div class="glass-card p-8 rounded-3xl text-center hover:bg-white/15 transition transform hover:-translate-y-2">
+                <h3 class="text-2xl font-bold mb-4">الترم الأول</h3>
+                <p class="text-gray-300 text-sm mb-6">مقررات ومواد الفرقة الثانية - الفصل الأول.</p>
+                <a href="term-details.html?year=2&term=1" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition">تصفح المواد</a>
+            </div>
+
+            <div class="glass-card p-8 rounded-3xl text-center hover:bg-white/15 transition transform hover:-translate-y-2">
+                <h3 class="text-2xl font-bold mb-4">الترم الثاني</h3>
+                <p class="text-gray-300 text-sm mb-6">مقررات ومواد الفرقة الثانية - الفصل الثاني.</p>
+                <a href="term-details.html?year=2&term=2" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition">تصفح المواد</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="glass-card mx-4 mb-4 rounded-2xl p-4 text-center text-sm text-gray-400">
+        جميع الحقوق محفوظة © كلية علوم الرياضة - جامعة أسيوط | تطوير: م. عبدالناصر
+    </footer>
+</body>
+</html>
+
