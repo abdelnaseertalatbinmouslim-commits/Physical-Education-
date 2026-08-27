@@ -3,152 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة كلية علوم الرياضة - جامعة أسيوط</title>
+    <title>منصة الكابتن - المساعدة الأكاديمية</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Google Font: Cairo -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    
-    <style>
-        * { font-family: 'Cairo', sans-serif; }
-        body {
-            background: #090d16;
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(30, 58, 138, 0.4) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(88, 28, 135, 0.4) 0px, transparent 50%);
-            background-attachment: fixed;
-        }
-        .hero-glow {
-            box-shadow: 0 0 50px -10px rgba(59, 130, 246, 0.3);
-        }
-        .glass-card {
-            background: rgba(18, 24, 43, 0.75);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .glass-card:hover {
-            border-color: rgba(96, 165, 250, 0.4);
-            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.3);
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .badge-glow {
-            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
-        }
-    </style>
+    <!-- Master External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="text-white min-h-screen flex flex-col justify-between selection:bg-blue-500 selection:text-white">
+<body class="flex flex-col justify-between selection:bg-blue-500 selection:text-white">
 
     <!-- Navbar -->
-    <nav class="sticky top-0 z-50 glass-card border-b border-white/10 px-4 py-3">
+    <nav class="sticky top-0 z-50 glass-card mx-3 my-2 px-4 py-3 rounded-2xl">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-3 space-x-reverse">
-                <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white text-xl font-bold shadow-lg">
-                    <i class="fa-solid fa-graduation-cap"></i>
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white text-xl font-black shadow-lg">
+                    <i class="fa-solid fa-user-ninja"></i>
                 </div>
                 <div>
-                    <h1 class="text-base md:text-lg font-black text-white leading-tight">كلية علوم الرياضة</h1>
-                    <p class="text-xs text-blue-400 font-semibold">جامعة أسيوط</p>
+                    <h1 class="text-lg font-black text-white leading-tight">الكابتن</h1>
+                    <p class="text-xs text-blue-400 font-semibold">منصة المساعدة والخدمات الدراسية</p>
                 </div>
             </div>
-            <a href="admin.html" class="bg-blue-600/20 hover:bg-blue-600/40 border border-blue-500/30 text-blue-300 text-xs md:text-sm font-bold px-4 py-2 rounded-xl transition flex items-center gap-2">
-                <i class="fa-solid fa-user-shield"></i>
+            <a href="admin.html" class="btn-admin flex items-center gap-2">
+                <i class="fa-solid fa-lock"></i>
                 <span>لوحة التحكم</span>
             </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative px-4 pt-8 pb-12 max-w-7xl mx-auto w-full text-center">
-        <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold px-4 py-1.5 rounded-full mb-6 badge-glow">
-            <i class="fa-solid fa-bolt text-yellow-400"></i> المنصة الرقمية المعتمدة لطلاب الكلية
+    <header class="relative px-4 pt-6 pb-10 max-w-7xl mx-auto w-full text-center">
+        <div class="inline-flex items-center gap-2 text-xs font-bold px-4 py-2 mb-6 badge-glow">
+            <i class="fa-solid fa-hand-holding-hand text-yellow-400"></i> كل المساعدات والمواد متوفرة لأصحابي دائماً
         </div>
         
-        <h2 class="text-3xl md:text-6xl font-black mb-4 leading-tight">
-            عالم علوم الرياضة في <span class="gradient-text">منصة واحدة</span>
+        <h2 class="text-3xl md:text-5xl font-black mb-4 leading-tight">
+            مساعدتك الدراسية مع <span class="gradient-text">الكابتن</span>
         </h2>
-        <p class="text-gray-300 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            بوابة طالب كلية علوم الرياضة بجامعة أسيوط للحصول على المحاضرات، التطبيقات العملية، الجداول والأقسام العلمية بسهولة وسرعة.
+        <p class="text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-8">
+            مكان واحد مخصص لتلخيص المحاضرات، توفير التطبيقات، ومساعدتك في المذاكرة والامتحانات بكل سهولة وبدون أي حرج.
         </p>
 
-        <!-- Stats Bar -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-10">
-            <div class="glass-card p-4 rounded-2xl text-center">
-                <i class="fa-solid fa-book-bookmark text-2xl text-blue-400 mb-1"></i>
-                <div class="text-2xl font-black text-white">5+</div>
-                <div class="text-xs text-gray-400">أقسام علمية</div>
+        <!-- Fast Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-6">
+            <div class="glass-card p-4 text-center">
+                <i class="fa-solid fa-file-pen text-2xl text-blue-400 mb-1"></i>
+                <div class="text-xl font-black text-white">ملخصات</div>
+                <div class="text-xs text-gray-400">شاملة ومباشرة</div>
             </div>
-            <div class="glass-card p-4 rounded-2xl text-center">
-                <div class="fa-solid fa-users text-2xl text-purple-400 mb-1"></div>
-                <div class="text-2xl font-black text-white">+2000</div>
-                <div class="text-xs text-gray-400">طالب وطالبة</div>
+            <div class="glass-card p-4 text-center">
+                <i class="fa-solid fa-circle-play text-2xl text-purple-400 mb-1"></i>
+                <div class="text-xl font-black text-white">محاضرات</div>
+                <div class="text-xs text-gray-400">روابط سريعة</div>
             </div>
-            <div class="glass-card p-4 rounded-2xl text-center">
-                <i class="fa-solid fa-clock-rotate-left text-2xl text-green-400 mb-1"></i>
-                <div class="text-2xl font-black text-white">24/7</div>
-                <div class="text-xs text-gray-400">وصول مباشر</div>
+            <div class="glass-card p-4 text-center">
+                <i class="fa-solid fa-headset text-2xl text-green-400 mb-1"></i>
+                <div class="text-xl font-black text-white">مساعدة 24/7</div>
+                <div class="text-xs text-gray-400">دعم مستمر</div>
             </div>
-            <div class="glass-card p-4 rounded-2xl text-center">
-                <i class="fa-solid fa-award text-2xl text-yellow-400 mb-1"></i>
-                <div class="text-2xl font-black text-white">الساعات المعتمدة</div>
-                <div class="text-xs text-gray-400">نظام الدراسة</div>
+            <div class="glass-card p-4 text-center">
+                <i class="fa-solid fa-shield-halved text-2xl text-yellow-400 mb-1"></i>
+                <div class="text-xl font-black text-white">خاص ومباشر</div>
+                <div class="text-xs text-gray-400">بدون تعقيد</div>
             </div>
         </div>
     </header>
 
-    <!-- Academic Years Cards -->
-    <section class="max-w-7xl mx-auto px-4 py-6 w-full">
-        <div class="flex items-center justify-between mb-8">
-            <div>
-                <h3 class="text-xl md:text-3xl font-black text-white">الفرق الدراسية</h3>
-                <p class="text-xs md:text-sm text-gray-400">اختر فرقتك الدراسية للوصول إلى المواد والمحاضرات</p>
-            </div>
+    <!-- Academic Years Sections -->
+    <section class="max-w-7xl mx-auto px-4 py-4 w-full">
+        <div class="mb-6">
+            <h3 class="text-2xl font-black text-white">المحتوى والمقررات</h3>
+            <p class="text-xs text-gray-400">اختر السلسلة الدراسية للوصول للملفات والمحاضرات</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- First Year Card -->
-            <div class="glass-card rounded-3xl p-6 md:p-8 flex flex-col justify-between relative overflow-hidden group transition duration-300 transform hover:-translate-y-2">
-                <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl group-hover:bg-blue-600/30 transition"></div>
+            <div class="glass-card p-6 flex flex-col justify-between">
                 <div>
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-14 h-14 bg-blue-600/20 border border-blue-500/30 rounded-2xl flex items-center justify-center text-blue-400 text-2xl">
-                            <i class="fa-solid fa-1"></i>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-12 h-12 bg-blue-600/20 border border-blue-500/30 rounded-2xl flex items-center justify-center text-blue-400 text-xl font-bold">
+                            01
                         </div>
-                        <span class="bg-blue-500/10 text-blue-300 text-xs font-bold px-3 py-1 rounded-full border border-blue-500/20">المرحلة الأساسية</span>
+                        <span class="text-xs font-bold px-3 py-1 bg-blue-500/10 text-blue-300 rounded-full border border-blue-500/20">الفرقة الأولى</span>
                     </div>
-                    <h4 class="text-2xl md:text-3xl font-extrabold text-white mb-2">الفرقة الأولى</h4>
+                    <h4 class="text-2xl font-black text-white mb-2">مقررات الفرقة الأولى</h4>
                     <p class="text-gray-300 text-xs md:text-sm leading-relaxed mb-6">
-                        تشمل مقررات التشريح الوصفي، وظائف الأعضاء، مدخل العلوم الرياضية، والمهارات الألعاب الأولمبية للترم الأول والثاني.
+                        تجمع لك كافة المحاضرات والتطبيقات والملخصات المقررة للترم الأول والترم الثاني.
                     </p>
                 </div>
-                <a href="first-year.html" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-3.5 px-6 rounded-2xl text-center shadow-lg transition flex items-center justify-center gap-2">
+                <a href="first-year.html" class="btn-main">
                     <span>دخول الفرقة الأولى</span>
                     <i class="fa-solid fa-arrow-left"></i>
                 </a>
             </div>
 
             <!-- Second Year Card -->
-            <div class="glass-card rounded-3xl p-6 md:p-8 flex flex-col justify-between relative overflow-hidden group transition duration-300 transform hover:-translate-y-2">
-                <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-purple-600/10 rounded-full blur-3xl group-hover:bg-purple-600/30 transition"></div>
+            <div class="glass-card p-6 flex flex-col justify-between">
                 <div>
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-14 h-14 bg-purple-600/20 border border-purple-500/30 rounded-2xl flex items-center justify-center text-purple-400 text-2xl">
-                            <i class="fa-solid fa-2"></i>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-12 h-12 bg-purple-600/20 border border-purple-500/30 rounded-2xl flex items-center justify-center text-purple-400 text-xl font-bold">
+                            02
                         </div>
-                        <span class="bg-purple-500/10 text-purple-300 text-xs font-bold px-3 py-1 rounded-full border border-purple-500/20">المرحلة التخصصية</span>
+                        <span class="text-xs font-bold px-3 py-1 bg-purple-500/10 text-purple-300 rounded-full border border-purple-500/20">الفرقة الثانية</span>
                     </div>
-                    <h4 class="text-2xl md:text-3xl font-extrabold text-white mb-2">الفرقة الثانية</h4>
+                    <h4 class="text-2xl font-black text-white mb-2">مقررات الفرقة الثانية</h4>
                     <p class="text-gray-300 text-xs md:text-sm leading-relaxed mb-6">
-                        تتضمن الميكانيكا الحيوية، الإدارة الرياضية، علم النفس الرياضي التطبيقي والمحاضرات العملية المتخصصة.
+                        مذكرات الشرح، التطبيقات العملية، وحلول الأسئلة المتوقعة للترم الأول والترم الثاني.
                     </p>
                 </div>
-                <a href="second-year.html" class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold py-3.5 px-6 rounded-2xl text-center shadow-lg transition flex items-center justify-center gap-2">
+                <a href="second-year.html" class="btn-main btn-purple">
                     <span>دخول الفرقة الثانية</span>
                     <i class="fa-solid fa-arrow-left"></i>
                 </a>
@@ -156,83 +120,52 @@
         </div>
     </section>
 
-    <!-- Faculty Departments Section -->
-    <section class="max-w-7xl mx-auto px-4 py-12 w-full">
-        <div class="text-center mb-10">
-            <h3 class="text-2xl md:text-4xl font-black text-white mb-3">الأقسام العلمية بالكلية</h3>
-            <p class="text-gray-400 text-xs md:text-sm max-w-xl mx-auto">تضم كلية علوم الرياضة بجامعة أسيوط نخبة من الأقسام التخصصية الأكاديمية</p>
+    <!-- Services Provided By Captain -->
+    <section class="max-w-7xl mx-auto px-4 py-8 w-full">
+        <div class="text-center mb-8">
+            <h3 class="text-2xl font-black text-white mb-2">خدمات المساعدة</h3>
+            <p class="text-gray-400 text-xs">إليك ما يوظفه الكابتن لتسهيل رحلتك الدراسية</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="glass-card p-5 rounded-2xl border border-white/5 flex items-start gap-4">
-                <div class="w-12 h-12 bg-blue-500/10 text-blue-400 rounded-xl flex items-center justify-center text-xl shrink-0">
-                    <i class="fa-solid fa-heart-pulse"></i>
+            <div class="glass-card p-5 flex items-start gap-4">
+                <div class="w-11 h-11 bg-blue-500/10 text-blue-400 rounded-xl flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-book-open"></i>
                 </div>
                 <div>
-                    <h5 class="font-bold text-white text-base mb-1">العلوم الحيوية والصحة الرياضية</h5>
-                    <p class="text-gray-400 text-xs leading-relaxed">دراسة وظائف الأعضاء، الإصابات الرياضية، والتأهيل البدني والتغذية.</p>
+                    <h5 class="font-bold text-white text-sm mb-1">ملخصات سريعة</h5>
+                    <p class="text-gray-400 text-xs">تجميع النقاط الهامة من المحاضرات في أوراق بسيطة.</p>
                 </div>
             </div>
 
-            <div class="glass-card p-5 rounded-2xl border border-white/5 flex items-start gap-4">
-                <div class="w-12 h-12 bg-indigo-500/10 text-indigo-400 rounded-xl flex items-center justify-center text-xl shrink-0">
-                    <i class="fa-solid fa-person-running"></i>
+            <div class="glass-card p-5 flex items-start gap-4">
+                <div class="w-11 h-11 bg-indigo-500/10 text-indigo-400 rounded-xl flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-laptop-code"></i>
                 </div>
                 <div>
-                    <h5 class="font-bold text-white text-base mb-1">التدريب الرياضي وعلوم الحركة</h5>
-                    <p class="text-gray-400 text-xs leading-relaxed">تطوير طرق التدريب، تحليل الأداء الحركي، والميكانيكا الحيوية.</p>
+                    <h5 class="font-bold text-white text-sm mb-1">روابط الشرح</h5>
+                    <p class="text-gray-400 text-xs">ترشيح أفضل الشروحات والفيديوهات المباشرة.</p>
                 </div>
             </div>
 
-            <div class="glass-card p-5 rounded-2xl border border-white/5 flex items-start gap-4">
-                <div class="w-12 h-12 bg-purple-500/10 text-purple-400 rounded-xl flex items-center justify-center text-xl shrink-0">
-                    <i class="fa-solid fa-brain"></i>
+            <div class="glass-card p-5 flex items-start gap-4">
+                <div class="w-11 h-11 bg-purple-500/10 text-purple-400 rounded-xl flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-circle-question"></i>
                 </div>
                 <div>
-                    <h5 class="font-bold text-white text-base mb-1">علم النفس والتربية الرياضية</h5>
-                    <p class="text-gray-400 text-xs leading-relaxed">الإعداد النفسي للرياضيين والتطور السلوكي والتربوي في الملاعب.</p>
-                </div>
-            </div>
-
-            <div class="glass-card p-5 rounded-2xl border border-white/5 flex items-start gap-4">
-                <div class="w-12 h-12 bg-amber-500/10 text-amber-400 rounded-xl flex items-center justify-center text-xl shrink-0">
-                    <i class="fa-solid fa-sitemap"></i>
-                </div>
-                <div>
-                    <h5 class="font-bold text-white text-base mb-1">الإدارة الرياضية والترويح</h5>
-                    <p class="text-gray-400 text-xs leading-relaxed">تنظيم الهيئات والمؤسسات الرياضية والمهرجانات والأنشطة الترويحية.</p>
-                </div>
-            </div>
-
-            <div class="glass-card p-5 rounded-2xl border border-white/5 flex items-start gap-4">
-                <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center text-xl shrink-0">
-                    <i class="fa-solid fa-chalkboard-user"></i>
-                </div>
-                <div>
-                    <h5 class="font-bold text-white text-base mb-1">المناهج وطرق التدريس</h5>
-                    <p class="text-gray-400 text-xs leading-relaxed">إعداد معلم التربية الرياضية وتصميم المناهج الدراسية الحديثة.</p>
-                </div>
-            </div>
-
-            <div class="glass-card p-5 rounded-2xl border border-white/5 flex items-start gap-4">
-                <div class="w-12 h-12 bg-rose-500/10 text-rose-400 rounded-xl flex items-center justify-center text-xl shrink-0">
-                    <i class="fa-solid fa-trophy"></i>
-                </div>
-                <div>
-                    <h5 class="font-bold text-white text-base mb-1">الرياضات المائية و الألعاب الجماعية</h5>
-                    <p class="text-gray-400 text-xs leading-relaxed">تطبيقات السباحة والإنقاذ والألعاب الجماعية والفردية المختلفة.</p>
+                    <h5 class="font-bold text-white text-sm mb-1">مراجعة أسئلة</h5>
+                    <p class="text-gray-400 text-xs">حل نماذج الأسئلة الصعبة والتطبيقات بشكل منظم.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="glass-card mt-12 border-t border-white/10 py-6 px-4 text-center">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
-            <p>© جميع الحقوق محفوظة - كلية علوم الرياضة - جامعة أسيوط</p>
-            <p class="flex items-center gap-1 font-semibold text-gray-300">
-                <span>تطوير وتصميم:</span>
-                <span class="text-blue-400">م. عبدالناصر</span>
+    <footer class="glass-card m-3 border-t border-white/10 py-4 px-4 text-center">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-gray-400">
+            <p>جميع الحقوق محفوظة © منصة الكابتن</p>
+            <p class="font-semibold text-gray-300">
+                تطوير وتصميم: <span class="text-blue-400">م. عبدالناصر</span>
             </p>
         </div>
     </footer>
